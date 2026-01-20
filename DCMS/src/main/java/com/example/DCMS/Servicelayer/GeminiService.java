@@ -1,21 +1,36 @@
 package com.example.DCMS.Servicelayer; 
 
-import com.example.DCMS.Entity.Customer; 
-import com.example.DCMS.Entity.TelecomService;
-import com.example.DCMS.Entity.Ticket;         
-import okhttp3.*;
-import org.json.JSONArray;
-import org.json.JSONObject;
-import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Value;
+
+import com.example.DCMS.Entity.Customer;
+import com.example.DCMS.Entity.TelecomService;
+import com.example.DCMS.Entity.Ticket;
+
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+
 @Service
 public class GeminiService {
 
-    private static final String API_KEY = "AIzaSyD4riNLr-tGOVM7yAqR6e2SZWO6ZtTYCi8"; 
-    private static final String URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=" + API_KEY;
+    @Value("${gemini.api.key}")
+    private String apiKey;
+
+    @Value("${gemini.base-url}")
+    private String baseUrl;
+
+    private String url() {
+        return baseUrl + "?key=" + apiKey;
+    }
 
     private final OkHttpClient client;
 
@@ -79,7 +94,7 @@ public class GeminiService {
                 json.toString(), MediaType.get("application/json; charset=utf-8")
             );
 
-            Request request = new Request.Builder().url(URL).post(body).build();
+            Request request = new Request.Builder().url(url()).post(body).build();
 
             try (Response response = client.newCall(request).execute()) {
                 if (!response.isSuccessful()) return "⚠️ AI Error: " + response.code();

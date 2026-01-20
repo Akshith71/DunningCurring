@@ -6,13 +6,13 @@ spring.datasource.username=root
 spring.datasource.password=root
 spring.jpa.hibernate.ddl-auto=update
 # JWT Configuration
-jwt.secret=MySuperSecretKeyForDCMSApplicationEnsureItIsLongEnough123
+jwt.secret=JWT_SECRET_KEY
 jwt.expiration=86400000
 # mail 
 spring.mail.host=smtp.gmail.com
 spring.mail.port=587
-spring.mail.username=ponugotiakshit@gmail.com
-spring.mail.password=gqzm ltzy xrby fvdb
+spring.mail.username=GMAIL
+spring.mail.password=GMAIL_APP_PASSWORD
 spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.starttls.enable=true
 #Port
@@ -21,5 +21,5 @@ server.port=9000
 #GEMINI
 # Gemini AI settings
 # NOTE: Keep the API key secret. This file is checked into source in this workspace — consider moving secrets to a secure store for production.
-gemini.api.key=AIzaSyD4riNLr-tGOVM7yAqR6e2SZWO6ZtTYCi8
-gemini.base-url=https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent
+gemini.api.key=GEMINI_API_KEY
+gemini.base-url=GEMINI_BASE_URL
