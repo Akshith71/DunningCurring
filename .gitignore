@@ -1,0 +1,334 @@
+# =====================
+# IDE & Editor Files
+# =====================
+.vscode/
+.idea/
+*.iws
+*.iml
+*.ipr
+.project
+.classpath
+.factorypath
+.settings/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vim/
+
+# =====================
+# OS Files
+# =====================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# =====================
+# Backend (Spring Boot/Maven)
+# =====================
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.maven.metadata.xml
+.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+mvnw.cmd.bak
+
+# Spring Boot
+*.jar
+*.war
+*.ear
+*.nar
+/target/
+/bin/
+HELP.md
+
+# Build files
+build/
+dist/
+*.class
+*.jar
+*.war
+*.zip
+
+# =====================
+# Frontend (Node.js/React)
+# =====================
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+lerna-lock.yaml
+
+# Production build
+dist/
+build/
+.vite/
+.next/
+out/
+.nuxt/
+*.tsbuildinfo
+
+# Dev dependencies cache
+.npm
+.eslintcache
+.stylelintcache
+.parcelcache
+
+# Optional npm cache directory
+.npm
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variables files
+.env
+.env.local
+.env.*.local
+.env.production.local
+.env.development.local
+.env.test.local
+
+# =====================
+# Database
+# =====================
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.sql
+dcsm_db/
+
+# =====================
+# Application Logs
+# =====================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# =====================
+# SonarLint
+# =====================
+.sonarlint/
+
+# =====================
+# Metadata & Config
+# =====================
+.metadata/
+.metadata
+.m2/
+.gradle/
+.classpath
+.factorypath
+.c9/
+*.c9search
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# =====================
+# Testing
+# =====================
+/test-results/
+/coverage/
+.nyc_output/
+*.lcov
+.jest_cache/
+.mocha_cache/
+
+# =====================
+# Temporary Files
+# =====================
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.#*
+\#*\#
+.\#*
+
+# =====================
+# Generated Files
+# =====================
+generated/
+generated-sources/
+generated-test-sources/
+.gradle/
+.pytest_cache/
+__pycache__/
+
+# =====================
+# IDE Specific
+# =====================
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+.gradle
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+.vim/
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+Session.vim
+.netrwhist
+
+# =====================
+# OS Generated Files
+# =====================
+.DS_Store
+.AppleDouble
+.LSOverride
+.Icon
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# =====================
+# GIT
+# =====================
+.git/
+.gitattributes
+*.orig
+
+# =====================
+# Documentation
+# =====================
+# Uncomment if you want to ignore certain doc files
+# docs/api/
+# docs/generated/
+
+# =====================
+# SSL/Certificates
+# =====================
+*.pem
+*.key
+*.csr
+*.crt
+*.pfx
+*.p12
+
+# =====================
+# Archive Files
+# =====================
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# =====================
+# Backup Files
+# =====================
+*.backup
+*.bak
+*.old
+*-old/
+
+# =====================
+# Email Config Files (Sensitive)
+# =====================
+# Don't commit files with credentials
+.env.*.local
+credentials.json
+secrets.json
+config.local.js
+
+# =====================
+# Platform Specific
+# =====================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+.Trash-*
+.nfs*
+
+# =====================
+# Miscellaneous
+# =====================
+*.orig
+*.rej
+*.conflict
+.env.local
+.env.*.local
+/node_modules/
+yarn-error.log
+.history/
+.vuepress/dist
+.vuepress/.cache
+.cache
+.cache/
+dist
+.next
+out
+.nuxt
+.cache/
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.vscode-test
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*

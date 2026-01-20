@@ -1,0 +1,210 @@
+/* Layout Containers */
+.dashboard-container {
+    min-height: 100vh;
+    background-color: #f4f7fa;
+    font-family: 'Segoe UI', sans-serif;
+    padding-bottom: 40px;
+  }
+  
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  /* TOP ROW: Flexbox for Profile and Services */
+  .dashboard-top-row {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap; /* Wraps on mobile */
+  }
+  
+  .profile-card {
+    flex: 1; /* Takes 1 part space */
+    min-width: 300px;
+  }
+  
+  .services-card {
+    flex: 2; /* Takes 2 parts space */
+    min-width: 300px;
+  }
+  
+  /* BOTTOM ROW */
+  .dashboard-bottom-row {
+    width: 100%;
+  }
+  
+  /* Card Styling */
+  .card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border: 1px solid #e2e8f0;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    color: #2d3748;
+  }
+  
+  /* Profile Details */
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .detail-item, .detail-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f7fafc;
+    padding-bottom: 8px;
+  }
+  
+  .label { color: #718096; }
+  .value { font-weight: 600; color: #2d3748; }
+  
+  /* Due Alert Box */
+  .due-alert {
+    margin-top: 20px;
+    background: #fff5f5;
+    border: 1px solid #feb2b2;
+    color: #c53030;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .due-alert h2 { margin: 5px 0; }
+  
+  .no-due-alert {
+    margin-top: 20px;
+    background: #f0fff4;
+    color: #2f855a;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Services List */
+  .service-row {
+    background: #f9fafb;
+    border: 1px solid #edf2f7;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .service-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .pay-action {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .pay-action input {
+    padding: 6px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    width: 100px;
+  }
+  
+  .pay-action button {
+    background: #3182ce;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Table */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .data-table th, .data-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #edf2f7;
+  }
+  
+  .data-table th { background: #f7fafc; color: #718096; }
+  
+  /* Status Badges */
+  .status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: bold;
+  }
+  
+  .status-badge.success { background: #c6f6d5; color: #22543d; }
+  .status-badge.danger { background: #fed7d7; color: #822727; }
+  .status-badge.warning { background: #feebc8; color: #744210; }
+  
+  /* Empty Message */
+  .empty-msg { color: #a0aec0; font-style: italic; text-align: center; }
+  
+  /* Header & Modal Styles (Ensuring they exist) */
+  .dashboard-header {
+    background: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+  }
+  
+  .header-left h2 { margin: 0; color: #2d3748; }
+  .customer-id { color: #718096; font-size: 0.9em; }
+  
+  .header-actions { display: flex; gap: 15px; }
+  
+  .icon-btn, .logout-btn {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .icon-btn { background: #ebf8ff; color: #3182ce; position: relative; }
+  .logout-btn { background: #fed7d7; color: #c53030; }
+  
+  .modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    width: 400px;
+    border-radius: 8px;
+    padding: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+  .close-btn { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+  .notif-item { border-bottom: 1px solid #eee; padding: 10px 0; }
+  .notif-date { font-size: 0.8em; color: #718096; }
+  .notif-msg { margin: 5px 0 0; color: #2d3748; }
